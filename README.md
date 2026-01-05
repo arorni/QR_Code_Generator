@@ -21,5 +21,5 @@ python -m venv venv
 pip install -r requirements.txt
 streamlit run app.py
 
-## 🚀 Live App
+## Live App
 👉 [Open the QR Code Generator] https://qr-code-generator-from-url.streamlit.app/
