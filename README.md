@@ -4,9 +4,6 @@ A simple Streamlit app that takes any URL and generates a scannable QR code.
 
 It can be used for event check-ins, Google Forms, or sharing quick URLs.
 
-## Live App
-👉 [Open the QR Code Generator] https://qr-code-generator-from-url.streamlit.app/
-
 ## Features
 - Paste any URL
 - Generates QR code instantly
@@ -23,5 +20,14 @@ python -m venv venv
 # activate venv
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+## Live App
+👉 [Open the QR Code Generator] https://qr-code-generator-from-url.streamlit.app/
+
+## 📸 App Screenshot
+![QR Code Generator App](assets/app_screenshot.jpg)
+
+
 
 
