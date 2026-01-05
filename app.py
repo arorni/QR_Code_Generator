@@ -8,7 +8,7 @@ st.set_page_config(page_title="QR Code Generator", page_icon="🔳")
 st.title("QR Code Generator")
 st.write("Paste URL here and this app will generate a scannable QR code.")
 
-form_url = st.text_input("URL", placeholder="https://forms.gle/9BvLNCisL1hADVFf9")
+form_url = st.text_input("URL", placeholder="https://forms.gle/9BvLNCisL1hADVFa8")
 
 if st.button("Generate QR Code"):
     if not form_url.strip():
