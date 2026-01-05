@@ -12,23 +12,28 @@ form_url = st.text_input("URL", placeholder="https://forms.gle/9BvLNCisL1hADVFf9
 
 if st.button("Generate QR Code"):
     if not form_url.strip():
-        st.error("Please enter a valid Google form URL")
+        st.error("Please enter a valid URL")
         st.stop()
+
+    if not (form_url.startswith("http://") or form_url.startswith("https://")):
+        st.error("URL must start with http:// or https://")
+        st.stop()
+
     qr = qrcode.QRCode(
-            version=2,
+            version=None,
             error_correction=qrcode.constants.ERROR_CORRECT_M,
             box_size=4,
-            border=2
+            border=4
         )
     qr.add_data(form_url.strip())
     qr.make(fit=True)
 
-    img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+    img = qr.make_image(fill_color="black", back_color="white")
 
     buf = BytesIO()
     img.save(buf, format="PNG")
     buf.seek(0)
 
-    st.image(Image.open(buf), caption="Scan to open the google form", width=220)
+    st.image(Image.open(buf), caption="Scan to open the URL.", width=220)
 
-    st.download_button(label="⬇️ Download QR as PNG", data=buf.getvalue(), file_name="google_form_qr.png",mime="image/png")
+    st.download_button(label="⬇️ Download QR as PNG", data=buf.getvalue(), file_name="qr_code.png",mime="image/png")
