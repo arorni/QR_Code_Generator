@@ -1,11 +1,18 @@
-# QR Code Generator (Google Form)
+# QR Code Generator
 
-A simple Streamlit app that takes a Google Form URL and generates a scannable QR code.
+A simple Streamlit app that takes any URL and generates a scannable QR code.
+
+It can be used for event check-ins, Google Forms, or sharing quick URLs.
 
 ## Features
-- Paste a Google Form URL
-- Generates QR code
+- Paste any URL
+- Generates QR code instantly
 - Download QR as PNG
+
+## Example Use Cases
+- Event check-in using a Google Form
+- Sharing survey or feedback links
+- Linking to documentation or landing pages
 
 ## Setup
 ```bash
